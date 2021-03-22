@@ -2,7 +2,7 @@
 This program takes multiple floor travel requests and creates an Elevator Move Plan (either UP or DOWN). The number of floors for the elevator to travel are customizable
 Here is the sample code ouptut
 
-Welcome to the ANZ Elevator!!
+Welcome to the Elevator!!
 Number of floors for the elevator: 10
 Elevator Starting Floor: 1
 Elevator is going up
