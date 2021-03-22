@@ -7,7 +7,7 @@ class Elevator:
         self.start_floor=start_floor
         #Initalizing the floor list
         self.floor_list=[]
-        #Door close option indicating the end of inputs from people
+        #Door close option indicating the end of floor inputs from passengers
         self.door_close=-1
         #Tracks current floor while elevator is in motion
         self.track_floor=start_floor
@@ -16,11 +16,12 @@ class Elevator:
         #Direction whether 'up' or 'down'
         self.direction=direction
 
-    #function which takes inputs from
+    #function which takes floor inputs from people
     def floors_requested(self):
         while (self.floors != self.door_close):
             while True:
                 try:
+                    #floor inputs validation
                     self.floors = int(input("Enter Floor#:"))
                 except ValueError:
                     print("Please enter valid input")
@@ -30,12 +31,13 @@ class Elevator:
                 break
             elif((self.direction=='up' and self.floors>self.start_floor) or (self.direction == 'down' and self.floors<self.start_floor)):
                 self.floor_list.append(self.floors)
-
+        #depending on the direction, the elevator will travel either up or down
         if(self.direction=='up'):
             self.travel_up(self.start_floor,self.floor_list)
         elif(self.direction=='down'):
             self.travel_down(self.start_floor,self.floor_list)
-
+    
+    #travel up function planning the elevator steps
     def travel_up(self,start_floor,floor_list):
         self.track_floor = self.start_floor
         self.floor_list.sort()
@@ -46,7 +48,8 @@ class Elevator:
             print("OPEN_DOOR")
             print("CLOSE_DOOR")
             self.track_floor = i
-
+    
+    #travel down function planning the elevator steps 
     def travel_down(self,start_floor,floor_list):
         self.track_floor = self.start_floor
         self.floor_list.sort()
@@ -57,4 +60,3 @@ class Elevator:
             print("OPEN_DOOR")
             print("CLOSE_DOOR")
             self.track_floor = i
-
