@@ -1,5 +1,9 @@
 # Elevator
-This program takes multiple floor travel requests and creates an Elevator Move Plan (either UP or DOWN). The number of floors for the elevator to travel are customizable
+This program takes multiple floor travel requestsfrom input and creates an Elevator Move Plan (either UP or DOWN). 
+The number of floors for the elevator to travel are customizable
+The program can be instantiated from the elevator object created from Elevator class. Each floor travel going up will be indicated by "UP_1" and floor travel going down with "DOWN_1". Please type "-1" to close the door or end the input process for the program
+
+
 Here is the sample code ouptut
 
 Welcome to the Elevator!!
