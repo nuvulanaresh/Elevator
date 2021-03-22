@@ -12,13 +12,14 @@ def elevator_commute(elevator):
 #Main function
 def main():
     # elevator object instantiated from Elevator class
-    # elevator=Elevator(total_floors=5,start_floor=1,direction='up')
-    # elevator_commute(elevator)
+    elevator=Elevator(total_floors=5,start_floor=1,direction='up')
+    elevator_commute(elevator)
 
+    # Below are some additional Unit Tests
     # elevator=Elevator(total_floors=5,start_floor=5,direction='down')
     # elevator_commute(elevator)
 
-    # Unit Tests
+
     # elevator=Elevator(total_floors=5,start_floor=2,direction='up')
     # elevator_commute(elevator)
     #
